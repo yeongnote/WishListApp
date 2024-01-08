@@ -65,7 +65,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="arrowshape.right" catalog="system" title="다른 상품보기"/>
                                 <connections>
-                                    <action selector="fetchRemoteProduct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G3y-D3-EVv"/>
+                                    <action selector="fetchPresentWishList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NwG-PZ-xSQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LuL-ch-rqJ">
@@ -119,7 +119,7 @@
         <!--Wish List View Controller-->
         <scene sceneID="flL-D1-uhF">
             <objects>
-                <tableViewController storyboardIdentifier="WishListViewController" id="4g6-qi-Ygh" customClass="WishListViewController" customModule="WishListApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="WishListViewController" id="4g6-qi-Ygh" customClass="WishListViewController" customModule="WishListApp" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="6WC-wQ-YNB">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
