@@ -55,18 +55,27 @@
                                 <color key="tintColor" red="0.2901961207" green="0.63529413940000001" blue="0.48235297199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="arrow.down.right.topleft.rectangle" catalog="system" title="담기"/>
+                                <connections>
+                                    <action selector="tappadSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cwy-A1-5Ej"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uV3-80-T3A">
                                 <rect key="frame" x="217" y="620" width="160" height="35"/>
                                 <color key="tintColor" systemColor="systemPinkColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="arrowshape.right" catalog="system" title="다른 상품보기"/>
+                                <connections>
+                                    <action selector="fetchRemoteProduct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G3y-D3-EVv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LuL-ch-rqJ">
                                 <rect key="frame" x="16" y="663" width="361" height="35"/>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="list.bullet" catalog="system" title="위시리스트"/>
+                                <connections>
+                                    <action selector="tappedPresentWishList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K6H-u8-o0X"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -96,6 +105,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FrM-63-6iL"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="kZj-qu-3ww" id="WKj-vj-CUu"/>
+                        <outlet property="imageView" destination="Rrm-Eg-iQx" id="xFw-DP-QeH"/>
+                        <outlet property="priceLabel" destination="FPY-Rd-HCh" id="m6Q-kS-Y2V"/>
+                        <outlet property="titleLabel" destination="2iN-W4-Cft" id="5u7-WJ-j9V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
