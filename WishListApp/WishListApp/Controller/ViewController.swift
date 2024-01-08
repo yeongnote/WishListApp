@@ -40,17 +40,25 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.fetchRemoteProduct()
     }
     
     //담기 버튼
     @IBAction func tappadSave(_ sender: UIButton) {
+        saveWishProduct()
     }
     //다른 상품보기 버튼
-    @IBAction func fetchRemoteProduct(_ sender: UIButton) {
+    @IBAction func fetchPresentWishList(_ sender: UIButton) {
+        fetchRemoteProduct()
     }
     //위시리스트 보기
     @IBAction func tappedPresentWishList(_ sender: UIButton) {
+        //WishListViewController 가져오기
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "WishListViewController") as? WishListViewController else { return }
+        
+        // WishListViewController를 present 하기
+        self.present(nextVC, animated: true)
+        
     }
     
     // currentProduct를 가져와 Core Data에 저장
@@ -68,7 +76,7 @@ class ViewController: UIViewController {
     }
     
     // URLSession을 통해 RemoteProduct를 가져와 currentProduct 변수에 저장
-    private func fecthWishListProduct() {
+    private func fetchRemoteProduct() {
         // 1 ~ 50 사이 랜덤 숫자 가져오기
         let productID = Int.random(in: 1...50)
         
